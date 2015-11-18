@@ -1,0 +1,6 @@
+#!/bin/bash
+# fresh install rpi wheezy
+
+cp sources.list /etc/apt/sources.list
+apt-get upgrade && apt-get update
+apt-get install -y nmap curl elinks isc-dhcp-server hostapd
