@@ -1,0 +1,5 @@
+deb http://kambing.ui.ac.id/raspbian/ wheezy main contrib non-free rpi
+deb-src http://kambing.ui.ac.id/raspbian/ wheezy main contrib non-free rpi
+
+deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+deb-src http://mirrrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
