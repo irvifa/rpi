@@ -1,36 +1,34 @@
 # Blacklisting a module
 
-masukkan list module yang akan di blacklist pada blacklist.conf dengan 
-format:
+add module(s) that will be blacklisted in the blacklist.conf file taht being provided in conf directory.
 
 ```
 ...
 blacklist [module-name]
 ...
 ```
-Untuk command yang diatas semisal ada yang depend ke module tadi bisa jadi 
-bakal di load. Selain cara tadi bisa juga pakai cara:
+Use the following format to make sure thos module(s) won't be loaded into the kernel:
 
 ```
 ...
-install module-name /bin/false
+install [module-name] /bin/false
 ...
 ```
 
-Untuk mengetahui moddul apa aja yang di black-list gunakan modinfo 
-[module-name]. Setelah selesai gunakan command berikut as root:
+Please use modinfo command to get a better understanding about the module(s) you wanna know.
+
+Use this command if you've finished the settings.
 
 ```
 # update-initramfs -u
 # reboot
 ```
 
-Untuk sementara pakai:
+YOu could use this command, temporarily:
 
 ```
 chmod +x blacklist-module.sh
 ./blacklist-module.sh
 ```
 
-Baca [dokumentasi](https://wiki.debian.org/KernelModuleBlacklisting) untuk 
-lebih jelasnya :))
+Please read [dokumentasi] (https://wiki.debian.org/KernelModuleBlacklisting) for more info  :))
