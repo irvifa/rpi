@@ -31,4 +31,5 @@ chmod +x blacklist-module.sh
 ./blacklist-module.sh
 ```
 
-Please read [dokumentasi] (https://wiki.debian.org/KernelModuleBlacklisting) for more info  :))
+Please read [documentation] 
+(https://wiki.debian.org/KernelModuleBlacklisting) for more info  :))
