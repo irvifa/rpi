@@ -20,6 +20,7 @@ Please use modinfo command to get a better understanding about the module(s) you
 Use this command if you've finished the settings.
 
 ```
+# depmod -ae
 # update-initramfs -u
 # reboot
 ```
