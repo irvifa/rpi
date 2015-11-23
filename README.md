@@ -13,3 +13,5 @@ more info
 source for kernel available in 
 [there](https://github.com/raspberrypi/linux) please navigate to the 
 branch to search kernel source that we're using now.
+
+currently using grouve pi to handle precision.
