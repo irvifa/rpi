@@ -11,7 +11,7 @@ Use the following format to make sure thos module(s) won't be loaded into the ke
 
 ```
 ...
-install [module-name] /bin/false
+install [module-name] /bin/true
 ...
 ```
 
