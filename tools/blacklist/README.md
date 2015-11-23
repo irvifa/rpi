@@ -7,7 +7,8 @@ add module(s) that will be blacklisted in the blacklist.conf file taht being pro
 blacklist [module-name]
 ...
 ```
-Use the following format to make sure thos module(s) won't be loaded into the kernel:
+Use the following format to make sure those module(s) won't be loaded into 
+the kernel (using fake install):
 
 ```
 ...
