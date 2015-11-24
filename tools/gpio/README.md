@@ -8,3 +8,7 @@
 
 ## Ultrasonic sensor
 1. [PING sensor] (https://www.parallax.com/product/28015)
+
+## Grouve Pi
+1. [DexterInd/GrovePi] (https://github.com/DexterInd/GrovePi)
+2. [Getting Started with GrovePi] (https://github.com/DexterInd/GrovePi)
