@@ -8,6 +8,13 @@
 * use `lsmod | less` to see loaded module.
 * use `modinfo` to know more info of a module
 
+##backup
+lsblk 
+dd if=/dev/mmcblk0 of=/home/[user]/raspi.img
+
+##restore
+dd if=/home/[user]/raspi.img of=/dev/mmcblk0
+
 read [raspberry/tools](https://github.com/raspberrypi/tools/issues) for 
 more info
 
