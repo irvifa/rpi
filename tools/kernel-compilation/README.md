@@ -51,3 +51,8 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig
 ```
 $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
 ```
+
+##For custom usage 
+```
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+```
