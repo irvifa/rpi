@@ -4,7 +4,11 @@ We could use the provided compiler:
 
 ` git clone https://github.com/raspberrypi/tools`
 
-include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your PATH
+include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your env variable
+
+` export PATH=$HOME/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH` (For x86)
+
+` export PATH=$HOME/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH` (For x86_x64)
 
 please remember that we can't use the ssh connection inside so better use the https connection
 
