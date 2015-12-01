@@ -8,7 +8,11 @@ include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your
 
 please remember that we can't use the ssh connection inside so better use the https connection
 
-`git clone --depth=1 https://github.com/raspberrypi/linux`, we're using 3.18 branch in the [Github] (https://github.com/raspberrypi/linux)
+we're using 3.18 branch in the [Github] 
+(https://github.com/raspberrypi/linux), just pick the branch and download 
+the zip and then:
+
+` unzip linux-rpi-3.18.y.zip -d .`
 
 Or, we could use another distro based compiler:
 
