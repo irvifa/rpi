@@ -2,11 +2,13 @@
 
 We could use the provided compiler:
 
-`git clone git://github.com/raspberrypi/tools.git --depth 1`
+` git clone https://github.com/raspberrypi/tools`
+
+include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your PATH
 
 please remember that we can't use the ssh connection inside so better use the https connection
 
-`https://github.com/raspberrypi/tools.git`
+`git clone --depth=1 https://github.com/raspberrypi/linux`, we're using 3.18 branch in the [Github] (https://github.com/raspberrypi/linux)
 
 Or, we could use another distro based compiler:
 
@@ -17,3 +19,27 @@ Or, we could use another distro based compiler:
 ##Arch Linux
 
 `yaourt -S arm-linux-gnueabi-gcc`
+
+
+#Build Sources
+
+##RPI 1
+
+```
+$ cd linux
+$ KERNEL=kernel
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcmrpi_defconfig
+```
+
+##RPI 2
+
+```
+$ cd linux
+$ KERNEL=kernel7
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig
+```
+
+##Finally for both of it
+```
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
+```
