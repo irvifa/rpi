@@ -8,12 +8,10 @@
 * use `lsmod | less` to see loaded module.
 * use `modinfo` to know more info of a module
 
-read [raspberry/tools](https://github.com/raspberrypi/tools/issues) for 
-more info
+read [raspberry/tools](https://github.com/raspberrypi/tools/issues) for more info
 
 source for kernel available in 
-[there](https://github.com/raspberrypi/linux) please navigate to the 
-branch to search kernel source that we're using now.
+[there](https://github.com/raspberrypi/linux) please navigate to the branch to search kernel source that we're using now.
 
 currently using grouve pi to handle precision.
 

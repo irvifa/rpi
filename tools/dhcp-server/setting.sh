@@ -9,4 +9,4 @@ cp ../../conf/hostapd-conf/sysctl.conf /etc/
 ./ip_tables.sh
 ./save_iptables.sh
 cp ../../conf/dhcpd-conf/interfaces /etc/network/
-
+reboot
