@@ -15,6 +15,8 @@ please remember that we can't use the ssh connection inside so better use the ht
 we're using 3.18 branch in the [Github] 
 (https://github.com/raspberrypi/linux), just pick the branch.
 
+`git checkout rpi-3.18.y`
+
 Or, we could use another distro based compiler:
 
 ##Ubuntu
