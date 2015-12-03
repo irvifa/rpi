@@ -12,7 +12,7 @@ include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your
 
 please remember that we can't use the ssh connection inside so better use the https connection
 
-we're using 3.18 branch in the [Github] 
+we're currently using 3.18 branch in the [Github] 
 (https://github.com/raspberrypi/linux), just pick the branch.
 
 `git checkout rpi-3.18.y`
@@ -54,4 +54,13 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
 ##For custom usage 
 ```
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+```
+
+##Install Modules
+```
+lsblk
+mkdir -p /tmp/mnt/fat32
+mkdir -p /tmp/mnt/ext4
+sudo mount /dev/sdb1 /tmp/mnt/fat32
+sudo mount /dev/sdb2 /tmp/mnt/ext4
 ```
