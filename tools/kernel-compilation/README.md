@@ -17,6 +17,10 @@ we're currently using 3.18 branch in the [Github]
 
 `git checkout rpi-3.18.y`
 
+Run rpi-update to get latest kernel. 
+
+`git checkout rpi-4.1.y`
+
 Or, we could use another distro based compiler:
 
 ##Ubuntu
