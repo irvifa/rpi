@@ -69,3 +69,6 @@ sudo mount /dev/sdb1 /tmp/mnt/fat32
 sudo mount /dev/sdb2 /tmp/mnt/ext4
 sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/tmp/mnt/ext4 modules_install
 ```
+
+##PS
+Change all the driver into module first
