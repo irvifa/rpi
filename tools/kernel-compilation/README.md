@@ -2,24 +2,30 @@
 
 We could use the provided compiler:
 
-` git clone https://github.com/raspberrypi/tools`
+```
+git clone https://github.com/raspberrypi/tools
 
-include `/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin` to your env variable
-
-` export PATH=$HOME/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH` (For x86)
-
-` export PATH=$HOME/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH` (For x86_x64)
+$ $CCPREFIX=$HOME/winarch/tools/arm-bcm2708/arm-bcm2708-linux-gnueabi/bin/arm-bcm2708-linux-gnueabi-
+$ make ARCH=arm CROSS_COMPILE=$CCPREFIX zImage modules dtbs
+$ mkdir /tmp/mnt/fat32
+$ mkdir /tmp/mnt/ext4
+$ sudo mount /dev/mmcblk0p1 /tmp/mnt/fat32
+$ sudo mount /dev/mmcblk0p2 /tmp/mnt/ext4
+$sudo make ARCH=arm CROSS_COMPILE=$CCPREFIX INSTALL_MOD_PATH=/tmp/mnt/ext4 modules_install
+$ sudo cp mnt/fat32/$KERNEL.img /tmp/mnt/fat32/$KERNEL.img.bak
+$ sudo scripts/mkknlimg arch/arm/boot/zImage /tmp/mnt/fat32/$KERNEL.img
+$ sudo cp arch/arm/boot/dts/*.dtb /tmp/mnt/fat32/
+$ sudo cp arch/arm/boot/dts/overlays/*.dtb* /tmp/mnt/fat32/overlays/
+$ sudo cp arch/arm/boot/dts/overlays/README /tmp/mnt/fat32/overlays/
+$ sudo umount /tmp/mnt/fat32
+$ sudo umount /tmp/mnt/ext4
+```
 
 please remember that we can't use the ssh connection inside so better use the https connection
 
-we're currently using 3.18 branch in the [Github] 
 (https://github.com/raspberrypi/linux), just pick the branch.
 
-`git checkout rpi-3.18.y`
-
 Run rpi-update to get latest kernel. 
-
-`git checkout rpi-4.1.y`
 
 Or, we could use another distro based compiler:
 
@@ -32,43 +38,3 @@ Or, we could use another distro based compiler:
 `yaourt -S arm-linux-gnueabi-gcc`
 
 
-#Build Sources
-
-##RPI 1
-
-```
-$ cd linux
-$ KERNEL=kernel
-$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcmrpi_defconfig
-```
-
-##RPI 2
-
-```
-$ cd linux
-$ KERNEL=kernel7
-$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcm2709_defconfig
-```
-
-##Finally for both of it
-```
-$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
-```
-
-##For custom usage 
-```
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
-```
-
-##Install Modules
-```
-lsblk
-mkdir -p /tmp/mnt/fat32
-mkdir -p /tmp/mnt/ext4
-sudo mount /dev/sdb1 /tmp/mnt/fat32
-sudo mount /dev/sdb2 /tmp/mnt/ext4
-sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/tmp/mnt/ext4 modules_install
-```
-
-##PS
-Change all the driver into module first
