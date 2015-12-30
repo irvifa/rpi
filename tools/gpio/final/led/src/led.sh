@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #export lib
-. ../lib/led.sh
+. ../lib/gpio.sh
 
 export
 setDirOut
